@@ -1,0 +1,38 @@
+3.1 
+
+# 1
+Array starts at arbitrary size, like 100. 
+Array starts at arbitrary divisions, like 1/3rd for 1st stack, 1/3rd for second stack, 1/3rd for third stack
+When 3rd of array needs more capacity, double the third (make it 66, total is 133), shift the rest
+
+Problem (implied by hints): array doesn't use all capacity
+
+#2 Flexible Divisions
+1| --- 2|---- 3|----
+1| --- 2| ---- 3|****  (needs one more)
+-->
+123****-------
+(now add 1 to 1)
+Double 1 in size, shift 2 and 3 to right
+1*-23****------
+
+# Circular Array
+When you want to keep adding to 3 but it hits end of array, shift 1 and 2 rightwards if there is unused capacity and then add from beginning to end.
+
+So...
+
+123---------
+
+Push: Add to bucket, shift all others rightwards 1
+Pop: Take from bucket, shift all others leftwards 1
+
+Divisions and items can overflow from right to left.
+
+Advantages: Space efficient
+Disadvantages slow... Each push and Pop takes N, where N is capacity of Stack.
+
+Not sure this is what they were looking for.
+
+
+
+
