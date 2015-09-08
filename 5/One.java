@@ -19,8 +19,12 @@ public class One
 		int num = insertee;
 		for (int i = start; i <= end; i++)
 		{
-				if (getBit(insertee, i - start))
+			System.out.println("for looP");
+				if (getBit(inserter, i - start))
+				{
 					num = setBitOne(num, i);
+
+				}
 				else
 					num = setBitZero(num, i);
 		}
