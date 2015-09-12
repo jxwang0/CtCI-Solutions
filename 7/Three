@@ -1,0 +1,35 @@
+public class JukeBox
+{
+	HashSet <Song> allSongs;
+	TreeSet <Album> albums;
+	boolean shuffle;
+
+	public void playSong(Song s) {...}
+	public void shuffle(boolean b) {...}
+	public Song getRandomSong() {...}
+}
+
+public class Song
+{
+	int id;
+	int trackLength;
+	String artists;
+	Album album;
+}
+
+public class Album
+{
+	int id;
+	String artist;
+	TreeSet <Song> songList;
+	public Song getRandomSongFromAlbum() {...}	
+	public Playlist makePlaylistFromAlbum{...}
+}
+
+public class Playlist
+{	
+	Song nowPlaying;
+	Queue <Song> list
+
+	public Song getNextSong();
+}
