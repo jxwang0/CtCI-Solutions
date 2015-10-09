@@ -8,12 +8,20 @@ public class Node
 	{
 		size = 0;
 	}
-	public Node(int d)
+	public Node(Integer d)
 	{
 		data = d;
 	}
 
-	public Node appendToTail(int d){
+	public Node (int [] arr)
+	{
+		for (int i = 0; i < arr.length; i++)
+		{
+			this.appendToTail(arr[i]);
+		}
+	}
+
+	public Node appendToTail(Integer d){
 		if (size == 0)
 		{
 			size++;
